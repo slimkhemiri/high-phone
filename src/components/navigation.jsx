@@ -23,11 +23,12 @@ export const Navigation = (props) => {
             />
           </a>{" "}
         </div>
-        <h2>HIGH PHONE</h2>
+
         <div
           className="collapse navbar-collapse"
           id="bs-example-navbar-collapse-1"
         >
+          <h2>HIGH PHONE</h2>
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a href="#features" className="page-scroll">
