@@ -150,7 +150,7 @@ export const Contact = (props) => {
       <div id='footer'>
         <div className='container text-center'>
           <p>
-            &copy;Copyright 2019 High Phone Ariana. Design by{' '}
+            &copy;Copyright 2019 High-Phone Ariana. Designed by{' '}
             <a href='https://slimkhemiri.netlify.app/' >
               SlimKhemiri
             </a>

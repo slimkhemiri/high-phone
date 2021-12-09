@@ -104,30 +104,30 @@
     "address": "35 Avenue Ibn Khaldoun 2080 riadh andalous, Ariana",
     "phone": "+216 28 168 270",
     "email": "boutaiebachraf@gmail.com",
-    "facebook": "facebook.com",
-    "twitter": "twitter.com",
-    "youtube": "youtube.com"
+    "facebook": "https://facebook.com",
+    "twitter": "https://twitter.com",
+    "youtube": "https://youtube.com"
   },
   "Features": [
     {
-      "icon": "fa fa-comments-o",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-wrench",
+      "title": "Réparation des PC/Mobiles",
+      "text": "Réparation des ordinateurs et des mobiles avec un garantie d'un an"
     },
     {
-      "icon": "fa fa-bullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-mobile",
+      "title": "Vente des mobiles",
+      "text": "Vente des mobiles de toutes les catégories nouveau et ancien "
     },
     {
-      "icon": "fa fa-group",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-sliders",
+      "title": "Vente des accessoires",
+      "text": "Vous trouvez tous les accessoires des mobiles et ordinateurs dans notre boutique"
     },
     {
-      "icon": "fa fa-magic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-truck",
+      "title": "Livraison à domicile",
+      "text": "Livraison à domicile gratuite pour nos clients"
     }
   ]
 }
