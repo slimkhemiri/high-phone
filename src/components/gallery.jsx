@@ -7,7 +7,7 @@ export const Gallery = (props) => {
         <div className='section-title'>
           <h2>Produits</h2>
           <p>
-            Nos meilleures qualité de produits
+        Les meilleures qualité de produits
           </p>
         </div>
         <div className='row'>
@@ -25,3 +25,4 @@ export const Gallery = (props) => {
     </div>
   )
 }
+

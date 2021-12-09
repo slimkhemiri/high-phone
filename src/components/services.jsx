@@ -3,11 +3,11 @@ export const Services = (props) => {
     <div id='services' className='text-center'>
       <div className='container'>
         <div className='section-title'>
-          <h2>Our Services</h2>
+          <h2>Nos Activités</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
+           Vous voulez changer votre téléphone mobile ou bien le réparer, Vous voulez acheter un ordinateur, Des accessoires...
           </p>
+          <h5>Nous sommes là pour vous servir</h5>
         </div>
         <div className='row'>
           {props.data

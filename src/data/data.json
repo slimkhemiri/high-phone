@@ -4,18 +4,17 @@
     "paragraph": "The highest quality with the lowest price"
   },
   "About": {
-    "paragraph": "High Phone est une boutique de Réparation, Vente & achat des mobiles situé a riadh landalous Ariana qui fait toujours des promotions pour ces clients avec un garantie avis qui permet à ces Clients de bénéficier des avantages et de gagner de l'argent et du temps",
+    "paragraph": "High Phone est une boutique de Réparation, Vente & achat des mobiles situé a riadh landalous Ariana qui fait toujours des promotions pour ces clients avec un garantie à vie qui permet à ces Clients de bénéficier des avantages et de gagner de l'argent et du temps",
     "Why": [
       "Meilleure prix",
-      "Joignable tous les jours 7/7 ",
+      "Joignabilité tous les jours 7/7 ",
       "Meilleure qualité de réparation",
-      "Vente des accessoires du mobiles",
-      "Garantie pendant un an"
+      "Vente des accessoires du mobiles"
     ],
     "Why2": [
       
-      "Des cadeaux aux clients",
-      "professionnalisme",
+      "Garantie un an",
+      "Professionnalisme",
       "Livraison A domicile",
       "Service rapide"
     ]
@@ -69,12 +68,12 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-apple",
+      "name": "I Phone",
+      "text": ""
     },
     {
-      "icon": "fa fa-cart-arrow-down",
+      "icon": "https://toppng.com/uploads/preview/samsung-logo-png-samsung-logo-png-white-11563008220rvkhjqpiaq.png",
       "name": "Consectetur adipiscing",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
     },
