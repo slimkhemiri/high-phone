@@ -2,7 +2,7 @@ export const Navigation = (props) => {
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
-        <div className="navbar-header">
+        {/* <div className="navbar-header">
           <button
             type="button"
             className="navbar-toggle collapsed"
@@ -22,13 +22,18 @@ export const Navigation = (props) => {
               style={{ width: 145, height: 100 }}
             />
           </a>{" "}
-        </div>
+        </div> */}
 
         <div
           className="collapse navbar-collapse"
           id="bs-example-navbar-collapse-1"
         >
-          <h2>HIGH PHONE</h2>
+          <img
+            alt="logo"
+            src="img/logo.png"
+            style={{ width: 145, height: 100 }}
+          />
+          {/* <h2>HIGH PHONE</h2> */}
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a href="#features" className="page-scroll">
