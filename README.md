@@ -8,4 +8,4 @@ This is a ReactJS website, For a Phone Store. The design is simple and beautiful
 
 https://highphone.netlify.app
 
-##### Made By Slim Khemiri
+##### Coded By Slim Khemiri
