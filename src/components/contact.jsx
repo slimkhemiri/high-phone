@@ -148,7 +148,7 @@ export const Contact = (props) => {
       <div id="footer">
         <div className="container text-center">
           <p>
-            Copyright &copy; 2019 By High Phone. Made by{" "}
+            Copyright &copy; 2019 By High Phone. Coded by{" "}
             <a href="https://slimkhemiri.netlify.app/">SlimKhemiri</a>
           </p>
         </div>

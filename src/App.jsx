@@ -9,10 +9,11 @@ import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import Cursor from "./Cursor";
 import Loading from "./Loading";
+import SideBar from "./SideBar";
 import "./App.css";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000,
+  speed: 2000,
   speedAsDuration: true,
 });
 
@@ -27,18 +28,20 @@ const App = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 4000);
   }, []);
 
   return (
     <div>
       {loading ? (
-        <Loading />
+        <div>
+          <Loading />
+          <Cursor />
+        </div>
       ) : (
         <div>
           <Cursor />
           <Navigation />
-
           <Header data={landingPageData.Header} />
           <Features data={landingPageData.Features} />
           {/* <Services data={landingPageData.Services} /> */}
