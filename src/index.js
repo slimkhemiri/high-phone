@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import SideBar from "./SideBar";
+import Loading from "./Loading";
 ReactDOM.render(
   <React.StrictMode>
-    {/* <SideBar /> */}
-    <App  />
+    {/* <Loading /> */}
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

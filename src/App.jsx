@@ -8,7 +8,7 @@ import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import Cursor from "./Cursor";
-import SideBar from "./SideBar";
+import Loading from "./Loading";
 import "./App.css";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -18,21 +18,35 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
 
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
+
   return (
     <div>
-      <Cursor />
-      <Navigation /> 
-      {/* <SideBar /> */}
-      <Header data={landingPageData.Header} />
-      <Features data={landingPageData.Features} />
-      {/* <Services data={landingPageData.Services} /> */}
-      <Gallery data={landingPageData.Gallery} />
-      <About data={landingPageData.About} />
-      <Contact data={landingPageData.Contact} />
+      {loading ? (
+        <Loading />
+      ) : (
+        <div>
+          <Cursor />
+          <Navigation />
+
+          <Header data={landingPageData.Header} />
+          <Features data={landingPageData.Features} />
+          {/* <Services data={landingPageData.Services} /> */}
+          <Gallery data={landingPageData.Gallery} />
+          <About data={landingPageData.About} />
+          <Contact data={landingPageData.Contact} />
+        </div>
+      )}
     </div>
   );
 };

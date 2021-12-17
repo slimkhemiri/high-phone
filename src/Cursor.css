@@ -1,6 +1,6 @@
 :root {
   --color-cursor: 90, 90, 90;
-  --cursor-outline-shade: 0.9;
+  --cursor-outline-shade: 0.5;
   --cursor-size: 40px;
   --cursor-outline-size: 32px;
 }
