@@ -7,6 +7,7 @@ import { Gallery } from "./components/gallery";
 import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
+import Cursor from './Cursor'
 import "./App.css";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -22,6 +23,7 @@ const App = () => {
 
   return (
     <div>
+      <Cursor />
       <Navigation />
       <Header data={landingPageData.Header} />
       <Features data={landingPageData.Features} />
