@@ -1,4 +1,4 @@
-import SideBar from "../SideBar";
+
 export const Header = (props) => {
   return (
     <header id="header">

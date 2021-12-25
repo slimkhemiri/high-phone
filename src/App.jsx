@@ -8,8 +8,8 @@ import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import Cursor from "./Cursor";
-import Loading from "./Loading";
-import SideBar from "./SideBar";
+// import Loading from "./Loading";
+// import SideBar from "./SideBar";
 import "./App.css";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -19,27 +19,21 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 4000);
+  // }, []);
 
   return (
     <div>
-      {loading ? (
-        <div>
-          <Loading />
-          <Cursor />
-        </div>
-      ) : (
-        <div>
+   
           <Cursor />
           <Navigation />
           <Header data={landingPageData.Header} />
@@ -49,8 +43,6 @@ const App = () => {
           <About data={landingPageData.About} />
           <Contact data={landingPageData.Contact} />
         </div>
-      )}
-    </div>
   );
 };
 
