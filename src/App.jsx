@@ -7,8 +7,8 @@ import { Gallery } from "./components/gallery";
 import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
-import Cursor from "./Cursor";
-// import Loading from "./Loading";
+// import Cursor from "./Cursor";
+import Loading from "./Loading";
 // import SideBar from "./SideBar";
 import "./App.css";
 
@@ -19,22 +19,27 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 4000);
-  // }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 8000);
+  }, []);
 
   return (
     <div>
-   
-          <Cursor />
+      {loading ? (
+        <>
+          <Loading />
+        </>
+      ) : (
+        <>
+          {/* <Cursor /> */}
           <Navigation />
           <Header data={landingPageData.Header} />
           <Features data={landingPageData.Features} />
@@ -42,7 +47,9 @@ const App = () => {
           <Gallery data={landingPageData.Gallery} />
           <About data={landingPageData.About} />
           <Contact data={landingPageData.Contact} />
-        </div>
+        </>
+      )}
+    </div>
   );
 };
 

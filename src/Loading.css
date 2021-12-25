@@ -1,90 +1,169 @@
-
-
-.center {
-  float: right;
-  margin-top: 10%;
-  width: 60%;
-
-  padding: 10px;
+#bod {
+  /* background-color: Gainsboro; */
+  --paint-color: rgb(40, 60, 80);
+  overflow: hidden;
 }
 
-::before {
+.load {
+  /* background-color: Gainsboro; */
+  --paint-color: rgb(40, 60, 80);
+  overflow: hidden;
   position: absolute;
-  content: "";
-}
-body {
-  position: absolute;
-  left: 50%;
-  top: 50%;
+  width: 60vw;
+  height: 156px;
   transform: translate(-50%, -50%);
-  background: var(--background-color);
+  top: 50%;
+  left: 50%;
 }
 
-/* reflection of the animation in the bottom */
-.wrapper {
-  -webkit-box-reflect: below 5px
-    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
-  /*  Just to make it center  */
-  transform: translatey(-25%);
-}
 
-.wrapper::before {
-  width: 100%;
-  height: 10px;
-  bottom: -10px;
-  background: rgba(0, 0, 0);
-  border-radius: 100%;
-  filter: blur(7px);
-}
 
-/* main loading circle  */
-.loading {
-  width: 300px;
-  height: 300px;
-  border-radius: 999px;
-  transform: rotate(-45deg);
-  animation: animated-curve 2s ease-in-out infinite;
-}
+/* Paint */
 
-/*  neon-semicircle */
-.loading::before {
-  bottom: 0;
-  background: #02fcfa;
-  width: 100%;
-  height: 50%;
-  border-radius: 0 0 999px 999px;
-  box-shadow: 0 0 100px -50px #02fcfa;
-}
-
-/* inner-cirle with the ball */
-.inner_circle {
+.paint {
   position: absolute;
-  inset: 20px;
-  background: var(--background-color);
-  border-radius: 999px;
-  animation: animated-ball 2s ease-in-out infinite;
+  height: 155px;
+  width: calc(100% - 349px);
+  overflow: hidden;
+  animation: animate-paint 10s ease-in-out infinite alternate;
 }
 
-/* style for the ball */
-.inner_circle::before {
-  inset: 2px;
-  top: 45%;
-  background: #fff;
-  width: 40px;
+.stroke, .stroke:before, .stroke:after {
+  position: absolute;
+  height: 20px;
+  width: calc(100% + 5px);
+  border-radius: 5px;
+  background-color: var(--paint-color);
+  z-index: 1;
+}
+
+.stroke {
+  top: 17px;
+  box-shadow: 10px 20px var(--paint-color);
+}
+
+.stroke:before {
+  content: '';
+  top: 40px;
+  left: 5px;
+  box-shadow: 5px 20px var(--paint-color);
+}
+
+.stroke:after {
+  content: '';
+  top: 80px;
+  left: 5px;
+  box-shadow: -5px 20px var(--paint-color);
+}
+
+h1 {
+  position: absolute;
+  display:flex;
+  top: 25px;
+  left: calc(25vw - 65px);
+  z-index: 2;
+  font-family: 'Pacifico', cursive;
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+
+
+/* Roller */
+
+.roller {
+  position: absolute;
+  width: 361px;
+  height: 161px;
+  animation: animate-roller 10s ease-in-out infinite alternate;
+  z-index: 3;
+}
+
+.roller-top {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-left: 5px solid #666666;
+  border-bottom: 5px solid #666666;
+  border-right: 5px solid #666666;
+  top: 96px;
+  left: 31px;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+.roller-top:before {
+  position: absolute;
+  content: '';
+  background-color: #666666;
+  width: 25px;
+  height: 153px;
+  border-radius: 5px;
+  left: -14px;
+  top: -96px;
+}
+
+.roller-top:after {
+  content: '';
+  position: absolute;
+  height: 135px;
+  width: 60px;
+  background-color: #fcf4e9;
+  border-radius: 10%;
+  top: -92px;
+  left: -36px;
+  border: 5px solid #f1e7da;
+}
+
+.roller-handle {
+  position: absolute;
+  width: 100px;
   height: 40px;
-  border-radius: 999px;
+  border-top: 5px solid #666666;
+  border-left: 5px solid #666666;
+  border-top-left-radius: 30px;
+  top: 70px;
+  left: 96px;
 }
 
-/* rotating the ball from initial point to -180deg */
-@keyframes animated-ball {
-  50% {
-    transform: rotate(-180deg);
-  }
+.roller-handle:before {
+  position: absolute;
+  content: '';
+  width: 200px;
+  height: 40px;
+  background-color: #999999;
+  border: 5px solid #666666;
+  left: 50px;
+  top: -27px;
+  border-radius: 10%;
 }
 
-/* rotating the circle from initial point (-45deg) to 45deg */
-@keyframes animated-curve {
-  50% {
-    transform: rotate(45deg);
-  }
+.roller-handle:after {
+  position: absolute;
+  content: '';
+  width: 180px;
+  height: 40px;
+  background-color: sandybrown;
+  border: 5px solid #a6593b;
+  left: 60px;
+  top: -27px;
+  border-radius: 5%;
+}
+
+
+
+/* Animations */
+
+@keyframes animate-paint {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes animate-roller {
+  0% { left: 0px; }
+  100% { left: 100%; }
 }
