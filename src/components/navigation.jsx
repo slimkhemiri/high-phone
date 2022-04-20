@@ -23,7 +23,7 @@ export const Navigation = (props) => {
         >
           <img
             alt="logo"
-            src="img/logo.png"
+            src="img/logo1.png"
             style={{ width: 145, height: 100 }}
           />
           {/* <h2>HIGH PHONE</h2> */}
