@@ -3,6 +3,7 @@
     padding: 20px;
     width: 111%;
   }
+  #logo,
   #about,
   #services,
   #testimonials,
@@ -16,3 +17,9 @@
     width: 110%;
   }
 }
+
+#logo { 
+  width:100;
+  height: auto;
+}
+

@@ -1,3 +1,4 @@
+import logo1 from "../logo1.png";
 export const Navigation = (props) => {
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
@@ -22,9 +23,10 @@ export const Navigation = (props) => {
           id="bs-example-navbar-collapse-1"
         >
           <img
+          id="logo"
             alt="logo"
-            src="img/logo1.png"
-            style={{ width: 145, height: 100 }}
+            src={logo1}
+            //  style={{ width: 95, height: auto}}
           />
           {/* <h2>HIGH PHONE</h2> */}
           <ul className="nav navbar-nav navbar-right">
